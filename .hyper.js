@@ -10,11 +10,6 @@ module.exports = {
     backgroundColor: '#000',
     borderColor: '#333',
     css: '',
-    termCSS: `
-        x-screen x-row {
-            font-variant-ligatures: initial;
-        }
-    `,
     showHamburgerMenu: '',
     showWindowControls: '',
     padding: '12px 14px',
@@ -42,12 +37,7 @@ module.exports = {
     bell: false,
     copyOnSelect: false
   },
-  plugins: [
-    'hyper-statusline',
-    'hypercwd',
-    'hyperlinks',
-    'hyper-search'
-  ],
+  plugins: ['hyper-statusline', 'hyperlinks', 'hyper-search', "hypercwd"],
   localPlugins: [
   ],
   keymaps: {
