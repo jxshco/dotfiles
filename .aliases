@@ -1,2 +1,4 @@
 alias c="clear"
 alias ..="cd .."
+alias zshrc=". ~/.zshrc"
+alias la="ls -la"
