@@ -57,3 +57,25 @@ function gcdate() {
 	unset d
 
 }
+
+# Commit with a date
+function git-amp() {
+
+	while [[ "$#" > 0 ]]; do case $1 in
+		-h|--help) h=1;;
+	  -m|--message) m="$2";;
+	esac; shift; done
+
+  if [[ -z "$h" ]] then
+		if [[ -z "$m" ]] then
+			echo "Message Not Set"
+		else
+			git add . && git commit -m "$m" && git push
+		fi
+	else
+		echo "Echo help ..... "
+  fi
+
+	unset m
+
+}
