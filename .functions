@@ -48,7 +48,11 @@ function gcdate() {
 			unset GIT_COMMITTER_DATE
 		fi
 	else
-		echo "Echo help ..... "
+		echo "Displaying Help.....
+		Enter Your Commit message with param -m
+		Enter Your Date with param -d (YYYY/MM/DD)
+		Enter Your Time with param -t (HH:MM:SS)
+		"
   fi
 
 	unset m
@@ -60,23 +64,5 @@ function gcdate() {
 
 # Git 'Add All Commit and Push' Function
 function git-amp() {
-
-	while [[ "$#" > 0 ]]; do case $1 in
-		-h|--help) h=1;;
-	  -m|--message) m="$2";;
-	esac; shift; done
-
-  if [[ -z "$h" ]] then
-		if [[ -z "$m" ]] then
-			echo "Message Not Set"
-		else
-			git add . && git commit -m "$m" && git push
-		fi
-	else
-		echo "Echo help ..... "
-  fi
-
-	unset m
-	unset h
-
+	git add . && git commit -m "$1" && git push
 }

@@ -7,3 +7,6 @@ brew install findutils
 
 #INSTALL ZSH
 #CHANGE SHELL
+
+
+brew cask install fastlane
