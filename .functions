@@ -63,6 +63,6 @@ function gcdate() {
 }
 
 # Git 'Add All Commit and Push' Function
-function git-amp() {
+function gcp() {
 	git add . && git commit -m "$1" && git push
 }
