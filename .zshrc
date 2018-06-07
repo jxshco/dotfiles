@@ -3,8 +3,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$HOME/.fastlane/bin:$PATH"
-export PATH="$HOME/Android/tools:$PATH"
-export PATH="$HOME/Android/platform-tools:$PATH"
+
+export ANDROID_HOME="/Users/jxsh/Library/Android/sdk"
+export PATH="$ANDROID_HOME/tools:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
 
 source $HOME/.aliases
 source $HOME/.functions
