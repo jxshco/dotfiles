@@ -4,7 +4,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.fastlane/bin:$PATH"
 
-export ANDROID_HOME="/Users/jxsh/Library/Android/sdk"
+export ANDROID_HOME="~/Library/Android/sdk"
 export PATH="$ANDROID_HOME/tools:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 
