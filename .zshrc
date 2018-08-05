@@ -18,6 +18,9 @@ source $HOME/.functions
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/jxsh/.nvm/versions/node/v8.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/jxsh/.nvm/versions/node/v8.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
+
+export PATH="$HOME/.fastlane/bin:$PATH"
+
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
