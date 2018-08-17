@@ -21,8 +21,8 @@ source $HOME/.functions
 
 export PATH="$HOME/.fastlane/bin:$PATH"
 
-source ./dotfiles/utils/notifyre.sh
-source ./dotfiles/utils/bash-preexec.sh
+source ~/dotfiles/utils/notifyre.sh
+source ~/dotfiles/utils/bash-preexec.sh
 
 
 # Set Spaceship ZSH as a prompt
