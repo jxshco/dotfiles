@@ -21,6 +21,10 @@ source $HOME/.functions
 
 export PATH="$HOME/.fastlane/bin:$PATH"
 
+source ./dotfiles/utils/notifyre.sh
+source ./dotfiles/utils/bash-preexec.sh
+
+
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
