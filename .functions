@@ -19,42 +19,6 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
-# Commit with a date
-function gcdate() {
-
-	while [[ "$#" > 0 ]]; do case $1 in
-		-h|--help) h=1;;
-	  -m|--message) m="$2";;
-		-d|--date) d="$2";;
-		-t|--time) t="$2"; shift;;
-	esac; shift; done
-
-  if [[ -z "$h" ]] then
-		if [[ -z "$m" || -z "$d" || -z "$t" ]] then
-			echo "Date and message not set"
-		else
-			export GIT_AUTHOR_DATE="${d}T${t}+01:00"
-			export GIT_COMMITTER_DATE="${d}T${t}+01:00"
-			git add .
-			git commit -m "$m"
-			unset GIT_AUTHOR_DATE
-			unset GIT_COMMITTER_DATE
-		fi
-	else
-		echo "Displaying Help.....
-		Enter Your Commit message with param -m
-		Enter Your Date with param -d (YYYY/MM/DD)
-		Enter Your Time with param -t (HH:MM:SS)
-		"
-  fi
-
-	unset m
-	unset t
-	unset h
-	unset d
-
-}
-
 # Git 'Add All Commit and Push' Function
 function gcp() {
 	git add . && git commit -m "$1" && git push
